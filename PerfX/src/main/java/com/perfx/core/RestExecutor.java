@@ -54,7 +54,7 @@ public class RestExecutor {
             es.execute(() -> {
                 for (int i = 0; i < noOfThreads; i++) {
                     String t = Thread.currentThread().getName();
-                    String finalUrl = url.concat(String.format("/%d@4928851@talicngpa.com", getRandomNumber()));
+                    String finalUrl = url.concat(String.format("/%d@@talicngpa.com", getRandomNumber()));
                     System.out.println("URL ---- " + finalUrl);
                     ResponseEntity<String> resp = restTemplate.exchange(finalUrl, HttpMethod.GET, requestEntity, String.class);
                     String msg = String.format("Tid = %s, statusCode = %d, body= %s", t, resp.getStatusCodeValue(), resp.getBody());
