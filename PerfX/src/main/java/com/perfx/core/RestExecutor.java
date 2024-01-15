@@ -52,7 +52,7 @@ public class RestExecutor {
     public void execute() {
         for (int i = 0; i < noOfThreads; i++) {
             es.execute(() -> {
-                for (int i = 0; i < noOfThreads; i++) {
+                for (int j = 0; j < noOfThreads; j++) {
                     String t = Thread.currentThread().getName();
                     String finalUrl = url.concat(String.format("/%d@talicngpa.com", getRandomNumber()));
                     System.out.println("URL ---- " + finalUrl);
